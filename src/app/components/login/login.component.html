@@ -1,0 +1,22 @@
+<body class="container d-flex myLogin">
+  <div>
+    <form class="bg-light myForm" (ngSubmit)="logInButton(username.value, password.value)">
+      <div class="form-outline mb-4">
+        <label class="form-label" for="username">Username</label>
+        <input type="text" id="username" #username class="form-control" />
+      </div>
+
+      <div class="form-outline mb-4">
+        <label class="form-label" for="form2Example2">Password</label>
+        <input type="password" id="form2Example2" #password class="form-control" />
+      </div>
+
+      <button type="submit" class="btn btn-primary btn-block mb-4">Sign in</button>
+
+
+      <div class="text-center">
+        <p>Not a member? <a href="/auth/signup">Register</a></p>
+      </div>
+    </form>
+  </div>
+</body>

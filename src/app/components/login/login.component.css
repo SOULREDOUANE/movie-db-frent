@@ -1,0 +1,19 @@
+body {
+  min-height: 100vh;
+  background-color: white;
+  width: 100%;
+}
+
+
+.myLogin {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+}
+
+
+.myForm {
+  width: 500px;
+  padding: 20px;
+}
