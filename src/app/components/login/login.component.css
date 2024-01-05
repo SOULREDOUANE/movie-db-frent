@@ -17,3 +17,27 @@ body {
   width: 500px;
   padding: 20px;
 }
+
+input{
+  margin-top: 10px;
+
+  border: none;
+  border-radius: 20px;
+
+  background-color: rgb(216, 214, 214);
+
+  height: 30px;
+  margin-left: 40px;
+
+  padding-left: 20px;
+}
+button{
+  height: 30px;
+  margin-left: 20px;
+  margin-top: 10px;
+  border: none;
+  border-radius: 10px;
+  width: 90px;
+
+  background-color: greenyellow;
+}

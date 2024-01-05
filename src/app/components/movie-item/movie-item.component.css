@@ -1,0 +1,71 @@
+ticket-container {
+  max-width: 300px;
+  /* margin: 20px; */
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  text-align: center;
+
+}
+.ticket-container{
+  padding-left: 5px;
+  padding-top: 4px;
+}
+
+.image img {
+  max-width: 80%;
+  max-height: 90%;
+  object-fit: cover;
+  border-radius: 4px;
+  margin-bottom: 10px;
+}
+
+.title {
+  margin: 0;
+  font-size: 18px;
+  font-weight: bold;
+  white-space: pre-wrap;
+}
+
+.release-date {
+  padding-top: 7px;
+  font-style: italic;
+  color: #888;
+  margin-bottom: 8px;
+}
+
+.date-content{
+  color: rgb(8, 228, 8);
+}
+
+.popularity {
+  font-size: 14px;
+}
+
+.popularity-content{
+  color: rgb(8, 228, 8) ;
+  padding-left: 6px;
+}
+.favorite {
+  color: red;
+  font-weight: bold;
+}
+
+.container{
+  padding: 0;
+  margin: 10px;
+}
+
+.favorite{
+  margin-left: 40px;
+  margin-bottom: 4px;
+}
+.star-anchor {
+  color: gray; /* Initial color */
+}
+
+.star-anchor.clicked {
+  color: orange; /* Color after being clicked */
+  border: 3px;
+}

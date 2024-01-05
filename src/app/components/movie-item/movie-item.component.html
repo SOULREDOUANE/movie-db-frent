@@ -1,0 +1,19 @@
+<!-- <div>
+  <div class="image"><img src="" alt=""></div>
+  <div class="container">
+    <h4 class=" title">movie.title</h4>
+    <div class="release-date">Release Date : </div>
+    <div class="popularity"> popularity : <span class="favorite" >favorite</span></div>
+  </div>
+</div> -->
+<div class="ticket-container">
+  <div class="image"><img [src]="'https://image.tmdb.org/t/p/w500' + movie.poster_path" alt="{{ movie.title }}"  ></div>
+  <div class="container">
+    <h4 class="title"> {{movie?.title}} </h4>
+    <div class="release-date">Release Date : <span class="date-content">{{movie?.release_date}}</span> </div>
+    <div class="popularity">Popularity :<span class="popularity-content">{{movie?.popularity}}</span>
+     <br>
+     <br>
+    <a href="" [routerLink]="['/details', movie.id]">View Details</a>
+  </div>
+</div>

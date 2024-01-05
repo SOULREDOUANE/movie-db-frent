@@ -1,0 +1,46 @@
+.nav-search-container{
+  display: grid;
+  grid-template-columns: 2fr 1fr;
+}
+
+.nav-container{
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr ;
+  padding-top: 10px;
+}
+.but-search {
+   color: blue;
+   border: none;
+   background-color: rgb(94, 94, 220);
+   border-radius: 10px;
+   /* margin-top: px; */
+}
+.search{
+  border: none;
+  border-radius: 10px;
+  background-color: gray;
+  color: white;
+  padding-left: 10px;
+  padding-bottom: 4px;
+
+
+}
+
+
+.form{
+  padding-left: 60px;
+  padding-top: 10px;
+  padding-bottom: 10px;
+}
+
+
+/* --------------------- */
+.container
+{
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr ;
+  gap: 15px;
+}
+.film-container {
+  margin-bottom: 20px; /* Adjust the value to your preferred spacing */
+}

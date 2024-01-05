@@ -1,0 +1,85 @@
+.container-details{
+  display: grid;
+  grid-template-columns: 1fr 2fr;
+  gap: 0px;
+}
+
+img{
+  width: 90%;
+  height: 100%;
+  padding: 10px;
+  border-radius: 20px;
+}
+.details-content{
+  padding: 0;
+  margin: 0;
+}
+h4{
+  color: rgb(53, 53, 239);
+  padding-top: 30px;
+  padding-left: 0px;
+  padding-bottom: 4px;
+}
+.release-date{
+  color:  rgb(36, 37, 39);
+  padding-bottom: 5px;
+}
+
+.popularity{
+  color: rgb(36, 37, 39);
+  padding-bottom: 5px;
+}
+
+.date-content{
+  color: rgb(27, 239, 27);
+  padding-left: 6px;
+}
+
+.popularity-content{
+  color: rgb(27, 239, 27);
+  padding-left: 6px;
+}
+
+.write-comment{
+  padding-left: 30px;
+  padding-bottom: 40px;
+}
+
+.save-comment{
+  border: none;
+  border-radius: 10px;
+  background-color: rgb(78, 78, 241);
+  color: rgb(57, 49, 49);
+  width: 100px;
+  height: 40px;
+}
+.label{
+  color: rgb(20, 19, 19);
+  padding-bottom: 5px;
+}
+
+textarea{
+  padding-left: 10px;
+}
+.comments{
+  margin-top: 40px;
+}
+
+.isnotFavorite{
+  color:  white;
+  background-color: rgb(157, 167, 157);
+  border: 0;
+  margin-top: 20px;
+  border-radius: 7px;
+  height: 40px;
+  width: 160px;
+}
+.isfavorite{
+  color:  white;
+  background-color: rgb(36, 197, 36);
+  border: 0;
+  margin-top: 20px;
+  border-radius: 7px;
+  height: 40px;
+  width: 160px;
+}

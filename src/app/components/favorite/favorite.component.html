@@ -1,0 +1,21 @@
+<div class="nav-search-container">
+  <form class="form">
+    <!-- <input class="search" type="search" name="searchValue" id="" placeholder="Search" [(ngModel)]="searchValue"> -->
+    <!-- <button class="but-search" type="submit" (click)="searchMovie()">Search</button> -->
+
+
+  </form>
+  <div class="nav-container">
+    <a class="nav-element" href=""><strong>Home</strong></a>
+    <a class="nav-element" href=""  ><strong>Favorite</strong></a>
+    <a class="nav-element" href=""><Strong>Sign Out</Strong></a>
+  </div>
+</div>
+<!-- ------ -->
+
+<div class="container">
+
+  <div  *ngFor="let movie of favoriteMovies; let i = index "  class="film-container">
+      <app-movie-item [movie]="movie"></app-movie-item>
+  </div>
+</div>

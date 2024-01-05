@@ -7,7 +7,7 @@ import { Observable } from 'rxjs';
 
 
 export interface Credentials {
-  username: string;
+  userName: string;
   password: string;
 }
 
@@ -21,10 +21,11 @@ export class AuthenticationService {
   private static router: Router;
   private static http: HttpClient;
 
-  private BACKEND_API: string = environment.API_BASE_URL;
+  private BACKEND_API: string =`${ environment.API_BASE_URL}/api/v1`;
 
-  constructor(private router: Router, private http: HttpClient) {
-
+  constructor(router: Router, http: HttpClient) {
+    AuthenticationService.http = http;
+    AuthenticationService.router = router;
   }
 
 
@@ -35,9 +36,9 @@ export class AuthenticationService {
     return AuthenticationService.instance;
   }
 
-  logIn(username: string, password: string): boolean {
+  logIn(userName: string, password: string): boolean {
     const cre: Credentials = {
-      username: username,
+      userName: userName,
       password: password
     }
     this.authenticate(cre);
@@ -52,7 +53,7 @@ export class AuthenticationService {
         if (response && response.success) {
           alert(1)
           localStorage.setItem('Auth', 'true')
-          localStorage.setItem('username', credentials.username)
+          localStorage.setItem('username', credentials.userName)
           AuthenticationService.router.navigate(['/']);
         } else {
           this.logout()
@@ -75,9 +76,9 @@ export class AuthenticationService {
   }
 
 
-  signUp(username: string, password: string) {
+  signUp(userName: string, password: string) {
 
-    const credentials = { username, password };
+    const credentials = { userName, password };
     const signUpUrl = `${this.BACKEND_API}/register`;
     AuthenticationService.router.navigate(['/auth/login']).then(r => true);
     return AuthenticationService.http.post(signUpUrl, credentials).subscribe(
