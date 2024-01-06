@@ -1,14 +1,45 @@
+version: '3'
+
 services:
-  angularapp:
-    container_name: angularappcontainer
-    build: .
-    image: angularapp:v1
-    ports:
-      - 80:80
-    expose:
-      - 80
+  postgres:
+    image: postgres
+    container_name: my-postgres-container-compose
     networks:
-      - internalnet
+      - my-network
+    environment:
+      POSTGRES_PASSWORD: soul-redouane
+      POSTGRES_USER: soul
+      MY_CUSTOM_DB_ENV: mydatabaseps
+    ports:
+      - "5432:5432"
+
+
+  backend:
+    image: soulredouane/redouane-spring-image
+    container_name: backend_container-compose
+    ports:
+      - "8080:8080"
+    networks:
+      - my-network
+    environment:
+      DB_HOST: my-postgres-container-compose
+      DB_NAME: soul
+      DB_USERNAME: soul
+      DB_PASSWORD: soul-redouane
+    depends_on:
+      - postgres
+    command: sh -c "sleep 60 && java -jar /app.jar"
+
+  frontend:
+    image: soulredouane/redouane-angular-image
+    container_name: frontend_container-compose
+    ports:
+      - "80:80"
+    networks:
+      - my-network
+    # depends_on:
+    #   - backend
+
 networks:
-  internalnet:
-      driver: bridge
+  my-network:
+

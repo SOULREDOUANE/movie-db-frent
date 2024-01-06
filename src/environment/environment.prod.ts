@@ -1,4 +1,4 @@
 export const environment={
   production:false,
-  API_BASE_URL: 'http://10.0.1.50'
+  API_BASE_URL: 'http://springboot-k8s-postgres:4201'
 }
