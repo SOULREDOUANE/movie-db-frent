@@ -10,6 +10,7 @@ services:
       POSTGRES_PASSWORD: soul-redouane
       POSTGRES_USER: soul
       MY_CUSTOM_DB_ENV: mydatabaseps
+      POSTGRES_HOST_AUTH_METHOD: trust  # Add this line for TRUST authentication
     ports:
       - "5432:5432"
 
@@ -42,4 +43,3 @@ services:
 
 networks:
   my-network:
-
